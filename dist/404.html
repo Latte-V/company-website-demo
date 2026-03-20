@@ -7,13 +7,7 @@
     <title>小微AI科技 - 企业AI转型专家</title>
     <script>
       // SPA redirect hack for GitHub Pages
-      (function() {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
+      sessionStorage.redirect = location.href;
     </script>
   </head>
   <body>
