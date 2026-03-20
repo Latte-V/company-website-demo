@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>小微AI科技 - 企业AI转型专家</title>
     <script>
-      // SPA redirect hack for GitHub Pages
-      // 保存当前URL，然后跳转到首页
-      sessionStorage.redirect = location.href;
-      window.location.replace('/company-website-demo/');
+      // GitHub Pages SPA hack: 保存当前URL并跳转到首页
+      (function() {
+        var path = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace('/company-website-demo/?redirect=' + encodeURIComponent(path));
+      })();
     </script>
   </head>
   <body>
-    <!-- 正在重定向... -->
+    <p>正在跳转...</p>
   </body>
 </html>
